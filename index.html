@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CivicTrack | Dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">CivicTrack</a>
+    <nav class="nav">
+      <a class="active" href="index.html">Dashboard</a>
+      <a href="report.html">Report Issue</a>
+      <a href="issues.html">Issues</a>
+      <a href="analytics.html">Analytics</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">AI-assisted public infrastructure monitoring</p>
+        <h1>Geospatial dashboard for civic issue priority analysis</h1>
+        <p class="hero-text">Track road, water, drainage, electricity, and waste issues with map-based visibility and frontend-only priority scoring.</p>
+      </div>
+      <a class="primary-btn" href="report.html">Report New Issue</a>
+    </section>
+
+    <section class="stats-grid" id="statsGrid"></section>
+
+    <section class="dashboard-grid">
+      <article class="panel">
+        <div class="section-head">
+          <div>
+            <h2>Issue Map</h2>
+            <p>Markers are colored by computed priority.</p>
+          </div>
+        </div>
+        <div id="map" class="map"></div>
+      </article>
+
+      <article class="panel">
+        <div class="section-head">
+          <div>
+            <h2>High Priority Queue</h2>
+            <p>Sorted using severity, age, reports, and sensitive area score.</p>
+          </div>
+        </div>
+        <div class="issue-stack" id="priorityList"></div>
+      </article>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

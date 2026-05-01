@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CivicTrack | Analytics</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">CivicTrack</a>
+    <nav class="nav">
+      <a href="index.html">Dashboard</a>
+      <a href="report.html">Report Issue</a>
+      <a href="issues.html">Issues</a>
+      <a class="active" href="analytics.html">Analytics</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-title">
+      <p class="eyebrow">Decision support</p>
+      <h1>Complaint analytics</h1>
+      <p>Charts are generated from JSON data and browser-saved reports.</p>
+    </section>
+
+    <section class="chart-grid">
+      <article class="panel">
+        <h2>Issues by Category</h2>
+        <canvas id="categoryChart"></canvas>
+      </article>
+      <article class="panel">
+        <h2>Status Distribution</h2>
+        <canvas id="statusChart"></canvas>
+      </article>
+      <article class="panel">
+        <h2>Priority Levels</h2>
+        <canvas id="priorityChart"></canvas>
+      </article>
+      <article class="panel">
+        <h2>Area-wise Issues</h2>
+        <canvas id="areaChart"></canvas>
+      </article>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/analytics.js"></script>
+</body>
+</html>

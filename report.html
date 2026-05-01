@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CivicTrack | Report Issue</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">CivicTrack</a>
+    <nav class="nav">
+      <a href="index.html">Dashboard</a>
+      <a class="active" href="report.html">Report Issue</a>
+      <a href="issues.html">Issues</a>
+      <a href="analytics.html">Analytics</a>
+    </nav>
+  </header>
+
+  <main class="page narrow">
+    <section class="page-title">
+      <p class="eyebrow">Citizen reporting</p>
+      <h1>Report an infrastructure issue</h1>
+      <p>Submitted issues are saved in your browser using localStorage.</p>
+    </section>
+
+    <form class="form-panel" id="issueForm">
+      <div class="form-grid">
+        <label>
+          Issue Title
+          <input type="text" id="title" placeholder="Example: Broken streetlight near gate" required>
+        </label>
+
+        <label>
+          Category
+          <select id="category" required>
+            <option value="">Select category</option>
+            <option>Road</option>
+            <option>Water</option>
+            <option>Drainage</option>
+            <option>Electricity</option>
+            <option>Waste</option>
+          </select>
+        </label>
+
+        <label>
+          Area
+          <input type="text" id="area" placeholder="Example: College Road" required>
+        </label>
+
+        <label>
+          Severity
+          <select id="severity" required>
+            <option value="">Select severity</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+        </label>
+
+        <label>
+          Latitude
+          <input type="number" step="0.000001" id="latitude" placeholder="12.971600" required>
+        </label>
+
+        <label>
+          Longitude
+          <input type="number" step="0.000001" id="longitude" placeholder="77.594600" required>
+        </label>
+
+        <label>
+          Duplicate Reports
+          <input type="number" min="1" id="duplicateReports" value="1" required>
+        </label>
+
+        <label>
+          Issue Image
+          <input type="file" id="image" accept="image/*">
+        </label>
+      </div>
+
+      <label class="checkbox-line">
+        <input type="checkbox" id="nearSensitivePlace">
+        Near school, hospital, bus stop, or main road
+      </label>
+
+      <label>
+        Description
+        <textarea id="description" rows="5" placeholder="Describe the issue clearly..." required></textarea>
+      </label>
+
+      <div id="imagePreview" class="image-preview"></div>
+
+      <div class="form-actions">
+        <button class="secondary-btn" type="reset">Clear</button>
+        <button class="primary-btn" type="submit">Submit Issue</button>
+      </div>
+      <p class="success-message" id="successMessage"></p>
+    </form>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/report.js"></script>
+</body>
+</html>

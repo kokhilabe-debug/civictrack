@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CivicTrack | Issues</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">CivicTrack</a>
+    <nav class="nav">
+      <a href="index.html">Dashboard</a>
+      <a href="report.html">Report Issue</a>
+      <a class="active" href="issues.html">Issues</a>
+      <a href="analytics.html">Analytics</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-title">
+      <p class="eyebrow">Issue registry</p>
+      <h1>Search and filter reported issues</h1>
+    </section>
+
+    <section class="filters">
+      <input type="search" id="searchInput" placeholder="Search by title or area">
+      <select id="categoryFilter">
+        <option value="All">All Categories</option>
+        <option>Road</option>
+        <option>Water</option>
+        <option>Drainage</option>
+        <option>Electricity</option>
+        <option>Waste</option>
+      </select>
+      <select id="statusFilter">
+        <option value="All">All Status</option>
+        <option>Pending</option>
+        <option>In Progress</option>
+        <option>Resolved</option>
+      </select>
+      <select id="severityFilter">
+        <option value="All">All Severity</option>
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+      </select>
+    </section>
+
+    <section class="issue-list" id="issueList"></section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/issues.js"></script>
+</body>
+</html>
